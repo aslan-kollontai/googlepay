@@ -1,34 +1,28 @@
-import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
-import AppTheme from "./theme/AppTheme";
-import AppAppBar from "./components/AppAppBar";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Layout from "./components/Layout";
 import Hero from "./components/Hero";
-import LogoCollection from "./components/LogoCollection";
-import Highlights from "./components/Highlights";
-import Pricing from "./components/Pricing";
-import Features from "./components/Features";
-import Testimonials from "./components/Testimonials";
-import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
+import Services from "./components/Services";
+import Divider from "./components/Divider";
+import Benefits from "./components/Benefits";
+import Contact from "./components/Contact";
 
-export default function App() {
+function App() {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
-    <AppTheme>
-      <CssBaseline enableColorScheme />
-
-      <AppAppBar />
+    <Layout>
       <Hero />
-      <div>
-        <Features />
-        <Divider />
-        <Highlights />
-        <Divider />
-        <Pricing />
-        <Divider />
-        <FAQ />
-        <Divider />
-        <Footer />
-      </div>
-    </AppTheme>
+      <Divider />
+      <Services />
+      <Divider />
+      <Benefits />
+      <Divider />
+      <Contact />
+    </Layout>
   );
 }
+
+export default App;
