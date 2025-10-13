@@ -11,18 +11,15 @@ import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
-export default function App(props: { disableCustomTheme?: boolean }) {
+export default function App() {
   return (
-    <AppTheme {...props}>
+    <AppTheme>
       <CssBaseline enableColorScheme />
 
       <AppAppBar />
       <Hero />
       <div>
-        <LogoCollection />
         <Features />
-        <Divider />
-        <Testimonials />
         <Divider />
         <Highlights />
         <Divider />
