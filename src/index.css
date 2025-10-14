@@ -61,6 +61,36 @@ p {
   }
 }
 
+/* Responsive Dropdown Styling */
+.navbar-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  min-width: 10rem;
+  z-index: 1;
+  background-color: #0f0f0f;
+  left: 0;
+
+  a {
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
 .hero {
   display: flex;
   flex-direction: column;
