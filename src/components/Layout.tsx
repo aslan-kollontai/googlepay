@@ -1,13 +1,17 @@
+import { Outlet } from "react-router";
+
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import Divider from "@/components/Divider";
 
-function Layout({ children }: { children: React.ReactNode }) {
+function Layout() {
   return (
     <>
       <NavBar />
       <Divider />
-      <main>{children}</main>
+      <main>
+        <Outlet />
+      </main>
       <Divider />
       <Footer />
     </>

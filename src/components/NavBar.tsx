@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,33 +10,33 @@ function NavBar() {
   return (
     <>
       <nav className="navbar">
-          <div className="navbar-dropdown">
-            <button className="dropdown-button" onClick={toggleDropdown}>
-              ☰
-            </button>
-            {isOpen && (
-              <div className="dropdown-menu">
-                <a onClick={handleClick}>About</a>
-                <a onClick={handleClick}>Blog</a>
-                <a href="#services" onClick={handleClick}>
-                  Services
-                </a>
-                <a href="#benefits" onClick={handleClick}>
-                  Benefits
-                </a>
-                <a href="#contact" onClick={handleClick}>
-                  Contact
-                </a>
-              </div>
-            )}
-          </div>
-          <div className="navbar-links">
-            <a>About</a>
-            <a>Blog</a>
-            <a href="#services">Services</a>
-            <a href="#benefits">Benefits</a>
-            <a href="#contact">Contact</a>
-          </div>
+        <div className="navbar-dropdown">
+          <button className="dropdown-button" onClick={toggleDropdown}>
+            ☰
+          </button>
+          {isOpen && (
+            <div className="dropdown-menu">
+              <Link to="about" onClick={handleClick}>
+                About
+              </Link>
+              <Link to="blog" onClick={handleClick}>
+                Blog
+              </Link>
+              <Link to="services" onClick={handleClick}>
+                Services
+              </Link>
+              <Link to="contact" onClick={handleClick}>
+                Contact
+              </Link>
+            </div>
+          )}
+        </div>
+        <div className="navbar-links">
+          <Link to="about">About</Link>
+          <Link to="blog">Blog</Link>
+          <Link to="services">Services</Link>
+          <Link to="contact">Contact</Link>
+        </div>
       </nav>
     </>
   );

@@ -1,4 +1,4 @@
-function Hero() {
+function Home() {
   return (
     <section className="hero" data-aos="fade-down">
       <h1 className="welcome">IT Services for Businesses</h1>
@@ -7,4 +7,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Home;

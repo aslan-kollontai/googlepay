@@ -7,7 +7,7 @@ import { AiFillExperiment } from "react-icons/ai";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { MdPrecisionManufacturing } from "react-icons/md";
 
-function Benefits() {
+function About() {
   return (
     <IconContext.Provider value={{ size: "3em" }}>
       <section className="section" id="benefits">
@@ -80,4 +80,4 @@ function Benefits() {
   );
 }
 
-export default Benefits;
+export default About;
